@@ -23,7 +23,7 @@ async function initialize() {
     }
 }
 
-initialize();
+
 
 app.get('/searchPincode', async (req, res) => {
     try {
@@ -117,5 +117,6 @@ app.post('/addPinCode', upload.single('pinCodes'), async (req, res) => {
 })
 const PORT = process.env.PORT
 app.listen(PORT, () => {
+    initialize();
     console.log(`Server listening at http://localhost:4000`);
 })
